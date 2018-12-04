@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>駅すぱあとWebサービスサンプル</title>
+    <!-- 
+      駅すぱあとWebサービス HTML5インターフェース
+    -->
+    <!-- 日付入力パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiDateTime/expCss/expGuiDateTime.css">
+    <script type="text/javascript" src="GUI/expGuiDateTime/expGuiDateTime.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 探索条件パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiCondition/expCss/expGuiCondition.css">
+    <script type="text/javascript" src="GUI/expGuiCondition/expGuiCondition.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 回数券情報パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiCoupon/expCss/expGuiCoupon.css">
+    <script type="text/javascript" src="GUI/expGuiCoupon/expGuiCoupon.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 経路表示パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiCourse/expCss/expGuiCourse.css">
+    <script type="text/javascript" src="GUI/expGuiCourse/expGuiCourse.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 経路探索パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiCourseLight/expCss/expGuiCourseLight.css">
+    <script type="text/javascript" src="GUI/expGuiCourseLight/expGuiCourseLight.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 分割計算パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiDivided/expCss/expGuiDivided.css">
+    <script type="text/javascript" src="GUI/expGuiDivided/expGuiDivided.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- ランドマークパーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiLandmark/expCss/expGuiLandmark.css">
+    <script type="text/javascript" src="GUI/expGuiLandmark/expGuiLandmark.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 路線図パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiMap/expCss/expGuiMap.css">
+    <script type="text/javascript" src="GUI/expGuiMap/expGuiMap.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 路線情報パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiRail/expCss/expGuiRail.css">
+    <script type="text/javascript" src="GUI/expGuiRail/expGuiRail.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 範囲探索パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiRange/expCss/expGuiRange.css">
+    <script type="text/javascript" src="GUI/expGuiRange/expGuiRange.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 定期払戻計算パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiRepayment/expCss/expGuiRepayment.css">
+    <script type="text/javascript" src="GUI/expGuiRepayment/expGuiRepayment.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 区間時刻表パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiSectionTimeTable/expCss/expGuiSectionTimeTable.css">
+    <script type="text/javascript" src="GUI/expGuiSectionTimeTable/expGuiSectionTimeTable.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 駅名入力パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiStation/expCss/expGuiStation.css">
+    <script type="text/javascript" src="GUI/expGuiStation/expGuiStation.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 駅情報パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiStationInfo/expCss/expGuiStationInfo.css">
+    <script type="text/javascript" src="GUI/expGuiStationInfo/expGuiStationInfo.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 駅時刻表パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiStationTimeTable/expCss/expGuiStationTimeTable.css">
+    <script type="text/javascript" src="GUI/expGuiStationTimeTable/expGuiStationTimeTable.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- 列車時刻表パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiTrainTimeTable/expCss/expGuiTrainTimeTable.css">
+    <script type="text/javascript" src="GUI/expGuiTrainTimeTable/expGuiTrainTimeTable.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+    <!-- バージョン情報パーツ --> 
+    <link class="css" rel="stylesheet" type="text/css" href="GUI/expGuiVersion/expCss/expGuiVersion.css">
+    <script type="text/javascript" src="GUI/expGuiVersion/expGuiVersion.js?key=__ACCESS_KEY__" charset="UTF-8"></script>
+  </head>
+  <body>
+    <!-- 日付入力 -->
+    <div id="dateTime"></div>
+    <!-- 出発駅 -->
+    <label>出発駅</label>
+    <div id="stationFrom"></div>
+    <!-- 到着駅 -->
+    <label>到着駅</label></span>
+    <div id="stationTo"></div>
+    <!-- 探索条件 -->
+    <div id="condition"></div>
+    <!-- 「探索」ボタン -->
+    <button class="btn btn-primary" style="padding:10px;width:100%;" onClick="APP.searchRun()">
+      <span style="font-size:200%;">探索</span>
+    </button>
+    <!-- 経路表示 -->
+    <div id="result"></div>
+  </body>
+  <script src="app.js"></script>
+  <script>
+    window.onload = function() {
+      APP.init();
+    };
+  </script>
+</html>
+

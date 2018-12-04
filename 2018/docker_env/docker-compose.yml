@@ -11,3 +11,14 @@ services:
     working_dir: /root/
     volumes:
       - ./public_html/hello_ews:/public_html
+  ews_gui:
+    build: ./docker/ews_gui
+    ports:
+      - "8080:80" # host:container
+    image: ews_gui
+    tty: true
+    stdin_open: true
+    privileged: true
+    working_dir: /root/
+    volumes:
+      - ./work_dir/hello_ews/public_html:/public_html
