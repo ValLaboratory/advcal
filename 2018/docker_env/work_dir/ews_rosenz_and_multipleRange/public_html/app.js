@@ -2,8 +2,8 @@ APP = (function() {
     var rosen = null;       // 駅すぱあと路線図のオブジェクト。
     var httpRequest = null; // HTTPアクセス用オブジェクト(駅すぱあとWebサービスを呼び出す際に使用する)。
 
-    var rosenz_key = "__ ROSENZ_ACCESS_KEY __"; // 駅すぱあと路線図のアクセスキー
-    var ews_key    = "__ EWS_ACCESS_KEY __";    // 駅すぱあとWebサービスのアクセスキー
+    var rosenz_key = "__ROSENZ_ACCESS_KEY__"; // 駅すぱあと路線図のアクセスキー
+    var ews_key    = "__EWS_ACCESS_KEY__";    // 駅すぱあとWebサービスのアクセスキー
 
     var processing_lock = false; // 処理のロック用変数
     var station_codes = [];      // 駅コードを持ちまわすための配列
