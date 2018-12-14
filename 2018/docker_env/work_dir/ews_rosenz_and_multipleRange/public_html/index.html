@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>路線図サンプル</title>
+
+<link rel="stylesheet" href="https://rmap.ekispert.jp/production/rosen.css" />
+<script src="https://rmap.ekispert.jp/production/rosen.js"></script>
+
+<style>
+
+  html, body { width: 100%; height: 100%; }
+  #map { width: 100%; height: 100%; }
+
+</style>
+
+</head>
+<body>
+  <p>東京駅から&nbsp;<span id="minute">10</span>&nbsp;分で到達可能な駅：</p>
+  <input id="slider" type="range" value="1" min="10" max="200" step="1" oninput="APP.multipleRange()" style="width:80%;">
+  <div id="map"></div>
+  <script type="text/javascript" src="app.js"></script>
+  <script type="text/javascript">
+    window.addEventListener('load', APP.init());
+  </script>
+</body>
+</html>

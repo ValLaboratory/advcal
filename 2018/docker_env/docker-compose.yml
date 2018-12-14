@@ -33,3 +33,14 @@ services:
     working_dir: /root/
     volumes:
       - ./work_dir/ews_rosenz/public_html:/public_html
+  ews_rosenz_and_multipleRange:
+    build: ./docker/ews_rosenz_and_multipleRange
+    ports:
+      - "8080:80" # host:container
+    image: ews_rosenz
+    tty: true
+    stdin_open: true
+    privileged: true
+    working_dir: /root/
+    volumes:
+      - ./work_dir/ews_rosenz_and_multipleRange/public_html:/public_html
